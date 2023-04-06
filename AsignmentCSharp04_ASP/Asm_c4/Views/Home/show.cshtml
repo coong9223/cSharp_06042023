@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Asm_c4.Models.Product>
+
+@{
+    ViewData["Title"] = "show";
+}
+
+<h1>show</h1>
+
+<p>
+    <a asp-action="create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idProduct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nameProduct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkAnh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.priceProduct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.availableQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.statusProduct)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.supplier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nameProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkAnh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.priceProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.availableQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.statusProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.supplier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "edit", new { id=item.idProduct }) |
+                @Html.ActionLink("Details", "details", new { id=item.idProduct }) |
+                @Html.ActionLink("Delete", "delete", new { id=item.idProduct })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

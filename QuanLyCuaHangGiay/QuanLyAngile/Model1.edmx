@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QuanliAngileModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Nhanvien">
+          <Key>
+            <PropertyRef Name="Masanpham" />
+          </Key>
+          <Property Name="Masanpham" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="tensanpham" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="danhmuc" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="giasanpham" Type="float" />
+          <Property Name="soluong" Type="int" />
+          <Property Name="ngaythem" Type="date" />
+        </EntityType>
+        <Function Name="TimKiemNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="masp" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="QuanliAngileModelStoreContainer">
+          <EntitySet Name="Nhanvien" EntityType="Self.Nhanvien" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuanliAngileModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Nhanvien">
+          <Key>
+            <PropertyRef Name="Masanpham" />
+          </Key>
+          <Property Name="Masanpham" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tensanpham" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="danhmuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="giasanpham" Type="Double" />
+          <Property Name="soluong" Type="Int32" />
+          <Property Name="ngaythem" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="QuanliAngileEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Nhanviens" EntityType="Self.Nhanvien" />
+          <FunctionImport Name="TimKiemNV" ReturnType="Collection(QuanliAngileModel.TimKiemNV_Result)">
+            <Parameter Name="masp" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="TimKiemNV_Result">
+          <Property Type="String" Name="Masanpham" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="tensanpham" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="danhmuc" Nullable="false" MaxLength="50" />
+          <Property Type="Double" Name="giasanpham" Nullable="true" />
+          <Property Type="Int32" Name="soluong" Nullable="true" />
+          <Property Type="DateTime" Name="ngaythem" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuanliAngileModelStoreContainer" CdmEntityContainer="QuanliAngileEntities">
+          <EntitySetMapping Name="Nhanviens">
+            <EntityTypeMapping TypeName="QuanliAngileModel.Nhanvien">
+              <MappingFragment StoreEntitySet="Nhanvien">
+                <ScalarProperty Name="Masanpham" ColumnName="Masanpham" />
+                <ScalarProperty Name="tensanpham" ColumnName="tensanpham" />
+                <ScalarProperty Name="danhmuc" ColumnName="danhmuc" />
+                <ScalarProperty Name="giasanpham" ColumnName="giasanpham" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+                <ScalarProperty Name="ngaythem" ColumnName="ngaythem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="TimKiemNV" FunctionName="QuanliAngileModel.Store.TimKiemNV">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanliAngileModel.TimKiemNV_Result">
+                <ScalarProperty Name="Masanpham" ColumnName="Masanpham" />
+                <ScalarProperty Name="tensanpham" ColumnName="tensanpham" />
+                <ScalarProperty Name="danhmuc" ColumnName="danhmuc" />
+                <ScalarProperty Name="giasanpham" ColumnName="giasanpham" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+                <ScalarProperty Name="ngaythem" ColumnName="ngaythem" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

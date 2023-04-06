@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\BanGiay_ASP_c4.props" />
+</Project>

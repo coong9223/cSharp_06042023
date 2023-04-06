@@ -1,0 +1,12 @@
+D:\NET103.1_C#3\QuanLyCuaHangGiay\QuanLyCuaHangGiay\bin\Debug\QuanLyCuaHangGiay.exe.config
+D:\NET103.1_C#3\QuanLyCuaHangGiay\QuanLyCuaHangGiay\bin\Debug\QuanLyCuaHangGiay.exe
+D:\NET103.1_C#3\QuanLyCuaHangGiay\QuanLyCuaHangGiay\bin\Debug\QuanLyCuaHangGiay.pdb
+D:\NET103.1_C#3\QuanLyCuaHangGiay\QuanLyCuaHangGiay\obj\Debug\QuanLyCuaHangGiay.csproj.AssemblyReference.cache
+D:\NET103.1_C#3\QuanLyCuaHangGiay\QuanLyCuaHangGiay\obj\Debug\QuanLyCuaHangGiay.csproj.SuggestedBindingRedirects.cache
+D:\NET103.1_C#3\QuanLyCuaHangGiay\QuanLyCuaHangGiay\obj\Debug\QuanLyCuaHangGiay.Login.resources
+D:\NET103.1_C#3\QuanLyCuaHangGiay\QuanLyCuaHangGiay\obj\Debug\QuanLyCuaHangGiay.Properties.Resources.resources
+D:\NET103.1_C#3\QuanLyCuaHangGiay\QuanLyCuaHangGiay\obj\Debug\QuanLyCuaHangGiay.csproj.GenerateResource.cache
+D:\NET103.1_C#3\QuanLyCuaHangGiay\QuanLyCuaHangGiay\obj\Debug\QuanLyCuaHangGiay.csproj.CoreCompileInputs.cache
+D:\NET103.1_C#3\QuanLyCuaHangGiay\QuanLyCuaHangGiay\obj\Debug\QuanLyCuaHangGiay.exe
+D:\NET103.1_C#3\QuanLyCuaHangGiay\QuanLyCuaHangGiay\obj\Debug\QuanLyCuaHangGiay.pdb
+D:\NET103.1_C#3\QuanLyCuaHangGiay\QuanLyCuaHangGiay\obj\Debug\QuanLyCuaHangGiay.FormMain.resources

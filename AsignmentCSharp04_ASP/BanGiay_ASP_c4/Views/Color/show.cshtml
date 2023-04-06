@@ -1,0 +1,47 @@
+﻿@model IEnumerable<BanGiay_ASP_c4.Models.Color>
+
+@{
+    ViewData["Title"] = "show";
+}
+
+<h1>show</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nameColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.statusColor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nameColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.statusColor)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.idColor }) |
+                @Html.ActionLink("Details", "Details", new { id=item.idColor }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.idColor })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Asm_c4.props" />
+</Project>

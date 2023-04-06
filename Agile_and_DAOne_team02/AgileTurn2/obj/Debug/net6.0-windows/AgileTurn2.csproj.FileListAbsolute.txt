@@ -1,0 +1,5 @@
+E:\cSharp\Agile_and_DAOne_team02\AgileTurn2\obj\Debug\net6.0-windows\AgileTurn2.csproj.AssemblyReference.cache
+E:\cSharp\Agile_and_DAOne_team02\AgileTurn2\obj\Debug\net6.0-windows\AgileTurn2.GeneratedMSBuildEditorConfig.editorconfig
+E:\cSharp\Agile_and_DAOne_team02\AgileTurn2\obj\Debug\net6.0-windows\AgileTurn2.AssemblyInfoInputs.cache
+E:\cSharp\Agile_and_DAOne_team02\AgileTurn2\obj\Debug\net6.0-windows\AgileTurn2.AssemblyInfo.cs
+E:\cSharp\Agile_and_DAOne_team02\AgileTurn2\obj\Debug\net6.0-windows\AgileTurn2.csproj.CoreCompileInputs.cache

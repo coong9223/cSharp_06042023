@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ASM_AspC4.Models.Role>
+
+@{
+    ViewData["Title"] = "ShowAll";
+}
+
+<h1>ShowAll</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idRole)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nameRole)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.statusRole)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idRole)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nameRole)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.statusRole)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.idRole }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.idRole }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.idRole })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

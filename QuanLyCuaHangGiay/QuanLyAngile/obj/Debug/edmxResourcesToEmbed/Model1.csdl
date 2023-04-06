@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanliAngileModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Nhanvien">
+    <Key>
+      <PropertyRef Name="Masanpham" />
+    </Key>
+    <Property Name="Masanpham" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tensanpham" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="danhmuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="giasanpham" Type="Double" />
+    <Property Name="soluong" Type="Int32" />
+    <Property Name="ngaythem" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="QuanliAngileEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Nhanviens" EntityType="Self.Nhanvien" />
+    <FunctionImport Name="TimKiemNV" ReturnType="Collection(QuanliAngileModel.TimKiemNV_Result)">
+      <Parameter Name="masp" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="TimKiemNV_Result">
+    <Property Type="String" Name="Masanpham" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="tensanpham" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="danhmuc" Nullable="false" MaxLength="50" />
+    <Property Type="Double" Name="giasanpham" Nullable="true" />
+    <Property Type="Int32" Name="soluong" Nullable="true" />
+    <Property Type="DateTime" Name="ngaythem" Nullable="true" />
+  </ComplexType>
+</Schema>

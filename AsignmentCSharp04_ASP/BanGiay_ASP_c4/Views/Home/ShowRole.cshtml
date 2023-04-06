@@ -1,0 +1,47 @@
+﻿@model IEnumerable<BanGiay_ASP_c4.Models.Role>
+
+@{
+    ViewData["Title"] = "ShowRole";
+}
+
+<h1>ShowRole</h1>
+
+<p>
+    <a asp-action="CreateRole">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idRole)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nameRole)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.statusRole)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idRole)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nameRole)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.statusRole)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditRole", new { id=item.idRole }) |
+                @Html.ActionLink("Details", "DetailsRole", new { id=item.idRole }) |
+                @Html.ActionLink("Delete", "DeleteRole", new { id=item.idRole })
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
